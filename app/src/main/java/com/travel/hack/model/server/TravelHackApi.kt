@@ -18,9 +18,8 @@ interface TravelHackApi {
         @Body body: List<Int>
     )
 
-    @GET("places/{username}")
+    @GET("places/")
     suspend fun getRecommendedSights(
-        @Path("username") name: String,
         @Query("city_id") cityId: Int
     ): List<PlaceDto>
 

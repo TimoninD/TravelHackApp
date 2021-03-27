@@ -5,6 +5,6 @@ import org.koin.dsl.module
 
 object InteractorModule {
     val module = module {
-        single { TravelHackInteractor(get(), get()) }
+        factory { TravelHackInteractor(get(), get()) }
     }
 }

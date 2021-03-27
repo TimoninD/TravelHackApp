@@ -16,26 +16,27 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        style="@style/TextRegular.16.White"
+        style="@style/TextSemiBold.24.White"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@id/tvDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvDescription"
         tools:text="fsdfsdfsdfsfsdfs" />
 
     <TextView
         android:id="@+id/tvDescription"
-        style="@style/TextRegular.12.White"
+        style="@style/TextRegular.20.White"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="fsdkfjskfjsdkfjsdf"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="fsdkfjskfjsdkfjsdf" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

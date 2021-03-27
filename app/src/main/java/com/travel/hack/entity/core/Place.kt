@@ -20,7 +20,7 @@ fun Place.toPlaceDto() = PlaceDto(
     description = this.description,
     lon = this.lon,
     lat = this.lat,
-    image = this.description
+    image = this.image
 )
 
 fun getEmptyPlace() = Place(0, "title", "type", "description", 0f, 0f, "")

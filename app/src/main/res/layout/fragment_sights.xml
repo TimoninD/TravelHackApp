@@ -22,23 +22,11 @@
             android:id="@+id/rvSights"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@drawable/bg_top_rounded_24"
             android:overScrollMode="never"
-            android:paddingTop="24dp"
+            android:paddingTop="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
-        <TextView
-            android:id="@+id/tvTotal"
-            style="@style/TextMedium.24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@id/rvSights"
-            app:layout_constraintStart_toStartOf="@id/rvSights"
-            app:layout_constraintTop_toTopOf="@id/rvSights"
-            tools:text="@string/sights_count" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnNext"

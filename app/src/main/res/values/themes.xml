@@ -2,15 +2,15 @@
     <!-- Base application theme. -->
     <style name="Theme.MainActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_700</item>
-        <item name="colorPrimaryVariant">@color/purple_900</item>
-        <item name="colorOnPrimary">@color/purple_800</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/crane_red</item>
         <item name="colorSecondaryVariant">@color/crane_red</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/placeholder</item>
         <!-- Customize your theme here. -->
         <item name="toolbarStyle">@style/BaseToolbar</item>
         <item name="buttonStyle">@style/BaseButton</item>
@@ -18,7 +18,8 @@
     </style>
 
     <style name="BaseToolbar" parent="Widget.AppCompat.Toolbar">
-        <item name="titleTextAppearance">@style/TextSemiBold.20.White</item>
+        <item name="titleTextAppearance">@style/TextSemiBold.20.Black</item>
+        <item name="android:background">@color/white</item>
         <item name="navigationIcon">@drawable/ic_arrow_back</item>
     </style>
 
@@ -37,8 +38,9 @@
 
     <style name="BaseEditText" parent="Widget.AppCompat.EditText">
         <item name="android:background">@drawable/bg_edit_text</item>
-        <item name="android:textColorHint">@color/white_50</item>
+        <item name="android:textColorHint">@color/black_50</item>
         <item name="android:padding">16dp</item>
-        <item name="android:textAppearance">@style/TextMedium.16.White</item>
+        <item name="android:textAppearance">@style/TextMedium.16.Black</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 </resources>

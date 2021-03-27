@@ -1,5 +1,6 @@
 package com.travel.hack.model.interactors
 
+import android.util.Log
 import com.travel.hack.entity.core.Place
 import com.travel.hack.entity.dto.toCity
 import com.travel.hack.entity.dto.toPlace
@@ -21,8 +22,9 @@ class TravelHackInteractor(private val api: TravelHackApi, private val prefs: Pr
 
     suspend fun getCities() = api.getCities().map { it.toCity() }
 
-    suspend fun getRecommendedSights() =
-        api.getRecommendedSights(cityId = cityId, name = username).map { it.toPlace() }
+    suspend fun getRecommendedSights(): List<Place> {
+        return api.getRecommendedSights(cityId = cityId).map { it.toPlace() }
+    }
 
     suspend fun optimalRoute(list: List<Place>) =
         api.optimalRoute(body = list.map { it.id }, name = username).map { it.toPlace() }

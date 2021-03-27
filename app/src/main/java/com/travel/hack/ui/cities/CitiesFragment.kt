@@ -28,7 +28,7 @@ class CitiesFragment : BaseFragment() {
                 }
                 adapter.notifyItemChanged(adapterPos)
                 city.isSelected = adapterPos != selectedPos
-                viewModel.selectedCityId = if (city.isSelected) city.cityId else null
+                viewModel.selectedCityId = if (city.isSelected) city.id else null
 
                 btnNext.isVisible = viewModel.selectedCityId != null
             }

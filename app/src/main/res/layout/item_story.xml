@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    tools:background="@color/black">
+    android:layout_marginStart="8dp">
 
     <ImageView
         android:id="@+id/ivStory"
@@ -16,7 +15,7 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        style="@style/TextRegular.14.White"
+        style="@style/TextRegular.14.Black"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

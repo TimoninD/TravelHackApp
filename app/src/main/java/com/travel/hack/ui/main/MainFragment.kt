@@ -49,20 +49,16 @@ class MainFragment : BaseFragment() {
     }
 
     private val storiesList = listOf(
-        Story(title = "Мексика", image = "https://www.jettravel.ru/upload/iblock/db2/6-66.jpg"),
+        Story(title = "Еда", image = "https://i.pinimg.com/originals/e7/8f/6d/e78f6d46292bcf9908921ddf84216a05.jpg"),
         Story(
-            title = "Италия",
-            image = "https://traveller-eu.ru/sites/default/files/styles/index/public/italy-4093227_1280.jpg"
+            title = "События",
+            image = "https://n1s2.hsmedia.ru/0c/84/62/0c84624aa76d50a55305fa5040755a62/620x429_1_e951f9b89399609452fac6926d302773@1200x830_0xac120003_8446140831608549183.jpg"
         ),
-        Story(title = "Швеция", image = "https://files.tpg.ua/pages2/87892/sweden.jpg"),
+        Story(title = "Театры", image = "https://upload.wikimedia.org/wikipedia/commons/e/e8/Bolshoi_interior_2011.jpeg"),
         Story(
-            title = "Россия",
-            image = "https://pptravel.ru/sites/default/files/files/countries/Russia/russia_photo_1.jpg"
+            title = "Кино",
+            image = "https://st2.depositphotos.com/1001877/5641/i/600/depositphotos_56412491-stock-photo-video-movie-cinema-concept-retro.jpg"
         ),
-        Story(
-            title = "Аргентина",
-            image = "https://cms.enjourney.ru/upload/Jana/Argentina/Argentina12.jpg"
-        )
     )
 
     private val feedList = listOf(

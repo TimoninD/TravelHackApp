@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 import com.travel.hack.entity.core.Place
 
 data class PlaceDto(
-    @SerializedName("place_id") val id: Int,
+    @SerializedName("id") val id: Int,
     @SerializedName("title") val title: String,
     @SerializedName("type") val type: String,
     @SerializedName("description") val description: String,
@@ -20,5 +20,5 @@ fun PlaceDto.toPlace() = Place(
     description = this.description,
     lon = this.lon,
     lat = this.lat,
-    image = this.description
+    image = this.image
 )

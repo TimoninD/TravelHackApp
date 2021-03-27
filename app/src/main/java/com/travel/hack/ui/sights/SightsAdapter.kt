@@ -22,7 +22,7 @@ fun sightsAdapterDelegate(itemClickListener: (place: Place, position: Int) -> Un
         bind {
             with(itemView) {
                 Glide.with(context)
-                    .load(R.drawable.ic_launcher_background)
+                    .load(item.image)
                     .apply {
                         transform(
                             CenterCrop(),

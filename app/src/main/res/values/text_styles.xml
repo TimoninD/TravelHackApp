@@ -25,12 +25,21 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+
     <style name="TextSemiBold.20.White">
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="TextSemiBold.20.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <style name="TextSemiBold.16">
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextSemiBold.16.Black">
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="TextMedium.16">
@@ -43,6 +52,10 @@
 
     <style name="TextMedium.16.White">
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextMedium.16.Black">
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="TextSemiBold.14">
@@ -77,6 +90,10 @@
 
     <style name="TextRegular.14.White">
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextRegular.14.Black">
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="TextRegular.12">

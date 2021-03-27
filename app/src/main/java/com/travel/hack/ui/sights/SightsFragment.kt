@@ -48,7 +48,6 @@ class SightsFragment : BaseFragment() {
         }
 
         viewModel.sights.observe(viewLifecycleOwner, {
-            tvTotal.text = getString(R.string.sights_count, it.size)
             adapter.items = it
             adapter.notifyDataSetChanged()
         })

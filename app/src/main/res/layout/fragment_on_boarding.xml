@@ -11,6 +11,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/on_boarding_title" />
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="rvCards,ibClose,ibLike,ibSkip" />
+
     <com.yuyakaido.android.cardstackview.CardStackView
         android:id="@+id/rvCards"
         android:layout_width="match_parent"
@@ -59,5 +65,14 @@
         app:layout_constraintStart_toEndOf="@id/ibLike"
         app:layout_constraintTop_toTopOf="@id/ibLike" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

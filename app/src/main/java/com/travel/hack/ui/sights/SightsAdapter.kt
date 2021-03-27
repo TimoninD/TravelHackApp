@@ -24,6 +24,7 @@ fun sightsAdapterDelegate(itemClickListener: (place: Place, position: Int) -> Un
             with(itemView) {
                 Glide.with(context)
                     .load(item.image)
+                    .placeholder(R.drawable.preview_square)
                     .apply {
                         transform(
                             CenterCrop(),
@@ -34,7 +35,7 @@ fun sightsAdapterDelegate(itemClickListener: (place: Place, position: Int) -> Un
 
                 tvTitle.text = item.title
                 tvDescription.text = item.description
-                ivChecked.isInvisible = item.isSelected
+                ivChecked.isInvisible = !item.isSelected
             }
         }
 

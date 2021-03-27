@@ -3,6 +3,7 @@ package com.travel.hack.ui.onboarding
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AccelerateInterpolator
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import com.travel.hack.R
@@ -77,6 +78,11 @@ class OnBoardingFragment : BaseFragment() {
         toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
         }
+
+        viewModel.progress.observe(viewLifecycleOwner, {
+            progressBar.isVisible = it
+            groupContent.isVisible = !it
+        })
 
         viewModel.sightsLiveData.observe(viewLifecycleOwner, {
             adapter.items = it

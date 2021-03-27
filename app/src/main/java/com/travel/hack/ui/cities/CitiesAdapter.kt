@@ -26,7 +26,7 @@ fun citiesAdapterDelegate(itemClickListener: (city: City, selectedPos: Int, adap
             with(itemView) {
                 Glide.with(context)
                     .load(item.image)
-                    .placeholder(R.drawable.preview_city)
+                    .placeholder(R.drawable.preview_square)
                     .apply {
                         transform(
                             CenterCrop(),

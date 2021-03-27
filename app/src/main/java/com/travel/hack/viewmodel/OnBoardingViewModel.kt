@@ -18,6 +18,8 @@ class OnBoardingViewModel : BaseViewModel() {
 
     val navigateToCity: SingleLiveData<Boolean> = SingleLiveData()
 
+    val progress: SingleLiveData<Boolean> = SingleLiveData()
+
     init {
         getSights()
     }
@@ -36,9 +38,12 @@ class OnBoardingViewModel : BaseViewModel() {
     private fun getSights() {
         coroutineScope.launch {
             try {
+                progress.postValue(true)
                 val result = interactor.getAllSights()
                 sightsLiveData.postValue(result)
+                progress.postValue(false)
             } catch (t: Throwable) {
+                progress.postValue(false)
                 t.printStackTrace()
             }
         }

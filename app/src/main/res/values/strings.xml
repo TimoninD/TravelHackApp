@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MainActivity</string>
+    <string name="tinder_title">Tinder</string>
 </resources>

@@ -11,15 +11,15 @@ class Prefs constructor(
 
     companion object {
         private const val AUTH_DATA = "auth_data"
-        private const val KEY_ACCESS_TOKEN = "access_token"
+        private const val KEY_NAME = "name"
     }
 
 
     private val authPrefs by lazy { getSharedPreferences(AUTH_DATA) }
 
-    var token: String?
-        get() = authPrefs.getString(KEY_ACCESS_TOKEN, "")
+    var name: String?
+        get() = authPrefs.getString(KEY_NAME, "")
         set(value) {
-            authPrefs.edit().putString(KEY_ACCESS_TOKEN, value).apply()
+            authPrefs.edit().putString(KEY_NAME, value).apply()
         }
 }

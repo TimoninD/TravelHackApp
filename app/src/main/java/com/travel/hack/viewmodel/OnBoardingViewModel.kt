@@ -3,6 +3,7 @@ package com.travel.hack.viewmodel
 import androidx.lifecycle.MutableLiveData
 import com.travel.hack.entity.core.Place
 import com.travel.hack.model.interactors.SightsInteractor
+import com.travel.hack.util.SingleLiveData
 import com.travel.hack.viewmodel.common.BaseViewModel
 import kotlinx.coroutines.launch
 import org.koin.core.inject
@@ -15,13 +16,31 @@ class OnBoardingViewModel : BaseViewModel() {
 
     val sightsLiveData: MutableLiveData<List<Place>> = MutableLiveData()
 
+    val navigateToCity: SingleLiveData<Boolean> = SingleLiveData()
+
     init {
         getSights()
     }
 
+    fun saveSights() {
+        coroutineScope.launch {
+            try {
+                interactor.saveSelectedSights(listSelectedPlace)
+                navigateToCity.postValue(true)
+            } catch (t: Throwable) {
+                t.printStackTrace()
+            }
+        }
+    }
+
     private fun getSights() {
         coroutineScope.launch {
-            sightsLiveData.postValue(interactor.getAllSights())
+            try {
+                val result = interactor.getAllSights()
+                sightsLiveData.postValue(result)
+            } catch (t: Throwable) {
+                t.printStackTrace()
+            }
         }
     }
 

@@ -10,16 +10,23 @@ class Prefs constructor(
         context.getSharedPreferences(prefsName, Context.MODE_PRIVATE)
 
     companion object {
-        private const val AUTH_DATA = "auth_data"
+        private const val APP_DATA = "app_data"
         private const val KEY_NAME = "name"
+        private const val CITY_ID_NAME = "city_id_name"
     }
 
 
-    private val authPrefs by lazy { getSharedPreferences(AUTH_DATA) }
+    private val appPrefs by lazy { getSharedPreferences(APP_DATA) }
 
     var name: String?
-        get() = authPrefs.getString(KEY_NAME, "")
+        get() = appPrefs.getString(KEY_NAME, "")
         set(value) {
-            authPrefs.edit().putString(KEY_NAME, value).apply()
+            appPrefs.edit().putString(KEY_NAME, value).apply()
+        }
+
+    var cityId: Int
+        get() = appPrefs.getInt(CITY_ID_NAME, 0)
+        set(value) {
+            appPrefs.edit().putInt(CITY_ID_NAME, value).apply()
         }
 }

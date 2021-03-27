@@ -1,4 +1,4 @@
-package com.travel.hack.ui.tinder
+package com.travel.hack.ui.onboarding
 
 import android.util.Log
 import android.view.View

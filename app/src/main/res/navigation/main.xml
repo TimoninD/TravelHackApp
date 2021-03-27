@@ -2,9 +2,49 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
-    app:startDestination="@id/tinderFragment">
+    app:startDestination="@id/usernameFragment">
 
     <fragment
-        android:id="@+id/tinderFragment"
-        android:name="com.travel.hack.ui.tinder.OnBoardingFragment" />
+        android:id="@+id/onBoardingFragment"
+        android:name="com.travel.hack.ui.onboarding.OnBoardingFragment" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_citiesFragment"
+            app:destination="@id/citiesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.travel.hack.ui.main.MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_sightsFragment"
+            app:destination="@id/sightsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/citiesFragment"
+        android:name="com.travel.hack.ui.cities.CitiesFragment" >
+        <action
+            android:id="@+id/action_citiesFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sightsFragment"
+        android:name="com.travel.hack.ui.sights.SightsFragment" >
+        <action
+            android:id="@+id/action_sightsFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.travel.hack.ui.map.MapFragment" />
+
+    <fragment
+        android:id="@+id/usernameFragment"
+        android:name="com.travel.hack.ui.username.UsernameFragment" >
+        <action
+            android:id="@+id/action_usernameFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+    </fragment>
 </navigation>

@@ -1,9 +1,8 @@
-package com.travel.hack.ui.tinder
+package com.travel.hack.ui.onboarding
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import com.travel.hack.R
 import com.travel.hack.ui.common.BaseFragment
@@ -26,6 +25,9 @@ class OnBoardingFragment : BaseFragment() {
                     adapter.items[position]
                 )
             }
+            if (adapter.items.size - 1 == position) {
+                viewModel.saveSights()
+            }
         }
     }
 
@@ -46,6 +48,12 @@ class OnBoardingFragment : BaseFragment() {
         viewModel.sightsLiveData.observe(viewLifecycleOwner, {
             adapter.items = it
             adapter.notifyDataSetChanged()
+        })
+
+        viewModel.navigateToCity.observe(viewLifecycleOwner, {
+            if (it) {
+                findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToCitiesFragment())
+            }
         })
     }
 

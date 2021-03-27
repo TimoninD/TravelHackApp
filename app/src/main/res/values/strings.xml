@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MainActivity</string>
     <string name="tinder_title">Tinder</string>
+    <string name="cities_search">Поиск</string>
+    <string name="username_hint">Имя пользователя</string>
+    <string name="username_sign_in">Войти</string>
+    <string name="username_error">Имя не должно быть пустым</string>
+    <string name="cities_select">Выбрать</string>
+    <string name="sights_next">Далее</string>
 </resources>

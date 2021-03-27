@@ -13,10 +13,32 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="toolbarStyle">@style/BaseToolbar</item>
+        <item name="buttonStyle">@style/BaseButton</item>
+        <item name="editTextStyle">@style/BaseEditText</item>
     </style>
 
     <style name="BaseToolbar" parent="Widget.AppCompat.Toolbar">
         <item name="titleTextAppearance">@style/TextSemiBold.20.White</item>
         <item name="navigationIcon">@drawable/ic_arrow_back</item>
+    </style>
+
+    <style name="BaseButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="cornerRadius">9dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:textAppearance">@style/TextSemiBold.14.White</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:contentInsetStart">0dp</item>
+        <item name="android:contentInsetEnd">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="BaseEditText">
+        <item name="android:background">@drawable/bg_edit_text</item>
+        <item name="android:textColorHint">@color/white_50</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textAppearance">@style/TextMedium.16.White</item>
     </style>
 </resources>

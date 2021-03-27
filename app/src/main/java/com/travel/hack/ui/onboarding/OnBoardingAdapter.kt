@@ -1,4 +1,4 @@
-package com.travel.hack.ui.tinder
+package com.travel.hack.ui.onboarding
 
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop

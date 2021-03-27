@@ -1,7 +1,6 @@
 package com.travel.hack.model.interactors
 
 import com.travel.hack.entity.core.Place
-import com.travel.hack.entity.dto.RouteRequest
 import com.travel.hack.entity.dto.toCity
 import com.travel.hack.entity.dto.toPlace
 import com.travel.hack.model.Prefs
@@ -28,11 +27,9 @@ class TravelHackInteractor(private val api: TravelHackApi, private val prefs: Pr
 
     suspend fun optimalRoute(list: List<Int>) =
         api.optimalRoute(
-            body = RouteRequest(
-                list = list,
-                lat = prefs.lat,
-                lng = prefs.lng
-            )
+            body = list,
+            lat = prefs.lat,
+            lng = prefs.lng
         )
             .map { it.toPlace() }
 }

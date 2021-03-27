@@ -2,7 +2,6 @@ package com.travel.hack.model.server
 
 import com.travel.hack.entity.dto.CityDto
 import com.travel.hack.entity.dto.PlaceDto
-import com.travel.hack.entity.dto.RouteRequest
 import retrofit2.http.*
 
 interface TravelHackApi {
@@ -25,9 +24,11 @@ interface TravelHackApi {
         @Query("city_id") cityId: Int
     ): List<PlaceDto>
 
-    @POST("routes/{username}")
+    @POST("routes")
     suspend fun optimalRoute(
-        @Body body: RouteRequest
+        @Body body: List<Int>,
+        @Query("lat") lat: Float,
+        @Query("lon") lng: Float
     ): List<PlaceDto>
 
 }

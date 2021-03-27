@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.travel.hack.ui.onboarding.OnBoardingFragment" >
+        android:name="com.travel.hack.ui.onboarding.OnBoardingFragment">
         <action
             android:id="@+id/action_onBoardingFragment_to_citiesFragment"
             app:destination="@id/citiesFragment" />
@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.travel.hack.ui.main.MainFragment" >
+        android:name="com.travel.hack.ui.main.MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_sightsFragment"
             app:destination="@id/sightsFragment" />
@@ -22,7 +22,7 @@
 
     <fragment
         android:id="@+id/citiesFragment"
-        android:name="com.travel.hack.ui.cities.CitiesFragment" >
+        android:name="com.travel.hack.ui.cities.CitiesFragment">
         <action
             android:id="@+id/action_citiesFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/sightsFragment"
-        android:name="com.travel.hack.ui.sights.SightsFragment" >
+        android:name="com.travel.hack.ui.sights.SightsFragment">
         <action
             android:id="@+id/action_sightsFragment_to_mapFragment"
             app:destination="@id/mapFragment" />
@@ -42,7 +42,7 @@
 
     <fragment
         android:id="@+id/usernameFragment"
-        android:name="com.travel.hack.ui.username.UsernameFragment" >
+        android:name="com.travel.hack.ui.username.UsernameFragment">
         <action
             android:id="@+id/action_usernameFragment_to_onBoardingFragment"
             app:destination="@id/onBoardingFragment" />

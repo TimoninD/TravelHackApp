@@ -10,6 +10,7 @@ data class Place(
     val lon: Float,
     val lat: Float,
     val image: String,
+    var isSelected: Boolean = true
 )
 
 fun Place.toPlaceDto() = PlaceDto(

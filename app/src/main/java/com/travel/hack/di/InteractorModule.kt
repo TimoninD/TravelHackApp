@@ -1,10 +1,10 @@
 package com.travel.hack.di
 
-import com.travel.hack.model.interactors.SightsInteractor
+import com.travel.hack.model.interactors.TravelHackInteractor
 import org.koin.dsl.module
 
 object InteractorModule {
     val module = module {
-        single { SightsInteractor(get(), get()) }
+        single { TravelHackInteractor(get(), get()) }
     }
 }

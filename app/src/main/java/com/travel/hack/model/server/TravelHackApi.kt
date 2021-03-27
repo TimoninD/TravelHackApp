@@ -14,20 +14,20 @@ interface TravelHackApi {
 
     @POST("places/{username}")
     suspend fun saveSelectedSights(
-        @Body body: List<Int>,
-        @Path("username") name: String
+        @Path("username") name: String,
+        @Body body: List<Int>
     )
 
     @GET("places/{username}")
     suspend fun getRecommendedSights(
-        @Query("city_id") cityId: Int,
-        @Path("username") name: String
+        @Path("username") name: String,
+        @Query("city_id") cityId: Int
     ): List<PlaceDto>
 
     @POST("routes/{username}")
     suspend fun optimalRoute(
-        @Body body: List<Int>,
-        @Path("username") name: String
+        @Path("username") name: String,
+        @Body body: List<Int>
     ): List<PlaceDto>
 
 }

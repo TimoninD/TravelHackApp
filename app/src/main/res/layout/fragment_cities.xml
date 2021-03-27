@@ -17,9 +17,8 @@
         android:id="@+id/rvCities"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:paddingStart="8dp"
-        android:paddingEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
         android:paddingBottom="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etSearch" />

@@ -11,10 +11,10 @@ import com.travel.hack.R
 import com.travel.hack.entity.core.City
 import com.travel.hack.model.Prefs
 import com.travel.hack.ui.common.BaseFragment
+import com.travel.hack.util.GridSpacingItemDecoration
 import com.travel.hack.viewmodel.CitiesViewModel
 import kotlinx.android.synthetic.main.fragment_cities.*
 import org.koin.android.ext.android.inject
-import org.koin.androidx.viewmodel.compat.ScopeCompat.viewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CitiesFragment : BaseFragment() {
@@ -42,7 +42,14 @@ class CitiesFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        rvCities.layoutManager = GridLayoutManager(requireContext(), SPAN_SIZE)
+        rvCities.addItemDecoration(
+            GridSpacingItemDecoration(
+                SPAN_COUNT,
+                SPACE_BETWEEN_COLUMN,
+                true
+            )
+        )
+        rvCities.layoutManager = GridLayoutManager(requireContext(), SPAN_COUNT)
         rvCities.adapter = adapter
 
         viewModel.cities.observe(viewLifecycleOwner, {
@@ -57,6 +64,7 @@ class CitiesFragment : BaseFragment() {
     }
 
     companion object {
-        private const val SPAN_SIZE = 3
+        private const val SPAN_COUNT = 3
+        private const val SPACE_BETWEEN_COLUMN = 8
     }
 }

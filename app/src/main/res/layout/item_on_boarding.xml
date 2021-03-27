@@ -31,12 +31,14 @@
         style="@style/TextRegular.20.White"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:maxLines="2"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="fsdkfjskfjsdkfjsdf" />
+        android:ellipsize="end"
+        tools:text="fsdkfjskfjsfsdkfjskfjsdkfjsdffsdkfjskfjsdkfjsdffsdkfjskfjsdkfjsdffsdkfjskfjsdkfjsdffsdkfjskfjsdkfjsdfdkfjsdf" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

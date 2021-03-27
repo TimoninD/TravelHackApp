@@ -1,5 +1,6 @@
 package com.travel.hack.di
 
+import com.travel.hack.entity.core.PlaceIdList
 import com.travel.hack.viewmodel.CitiesViewModel
 import com.travel.hack.viewmodel.MapViewModel
 import com.travel.hack.viewmodel.OnBoardingViewModel
@@ -11,7 +12,7 @@ object ViewModelsModule {
     val module = module {
         viewModel { OnBoardingViewModel() }
         viewModel { CitiesViewModel() }
-        viewModel { MapViewModel() }
+        viewModel { (placeIdList: PlaceIdList) -> MapViewModel(placeIdList) }
         viewModel { SightsViewModel() }
     }
 }

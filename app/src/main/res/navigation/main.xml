@@ -38,7 +38,11 @@
 
     <fragment
         android:id="@+id/mapFragment"
-        android:name="com.travel.hack.ui.map.MapFragment" />
+        android:name="com.travel.hack.ui.map.MapFragment">
+        <argument
+            android:name="listIds"
+            app:argType="com.travel.hack.entity.core.PlaceIdList" />
+    </fragment>
 
     <fragment
         android:id="@+id/usernameFragment"

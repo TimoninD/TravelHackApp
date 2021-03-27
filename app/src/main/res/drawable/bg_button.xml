@@ -3,7 +3,8 @@
     android:color="?colorControlHighlight">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/primary_variant" />
+            <stroke android:color="#eb4c61" android:width="2dp"/>
+            <solid android:color="@color/white" />
             <corners android:radius="24dp" />
         </shape>
     </item>

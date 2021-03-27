@@ -1,5 +1,6 @@
 package com.travel.hack.ui.sights
 
+import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
@@ -33,7 +34,7 @@ fun sightsAdapterDelegate(itemClickListener: (place: Place, position: Int) -> Un
 
                 tvTitle.text = item.title
                 tvDescription.text = item.description
-                ivChecked.isVisible = item.isSelected
+                ivChecked.isInvisible = item.isSelected
             }
         }
 

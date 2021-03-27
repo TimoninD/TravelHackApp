@@ -35,7 +35,7 @@
         <item name="android:paddingBottom">0dp</item>
     </style>
 
-    <style name="BaseEditText">
+    <style name="BaseEditText" parent="Widget.AppCompat.EditText">
         <item name="android:background">@drawable/bg_edit_text</item>
         <item name="android:textColorHint">@color/white_50</item>
         <item name="android:padding">16dp</item>

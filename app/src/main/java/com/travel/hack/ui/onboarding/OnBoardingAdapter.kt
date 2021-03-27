@@ -15,7 +15,7 @@ fun onBoardingAdapterDelegate() = adapterDelegate<Place, Place>(R.layout.item_on
         itemView.tvTitle.text = item.title
         itemView.tvDescription.text = item.description
         Glide.with(context)
-            .load(R.drawable.ic_launcher_background)
+            .load(item.image)
             .apply {
                 transform(
                     CenterCrop(),

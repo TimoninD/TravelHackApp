@@ -71,8 +71,20 @@ class MainFragment : BaseFragment() {
             title = "Концерт в Польше",
             description = "В Варшаве 28 марта выступит местная рок-группа с необычным и новым стилем музыки"
         ),
-        FeedItem(image = "", title = "", description = ""),
-        FeedItem(image = "", title = "", description = ""),
-        FeedItem(image = "", title = "", description = "")
+        FeedItem(
+            image = "https://polsha4you.com/wp-content/uploads/2019/10/1q.png",
+            title = "Концерт в Польше",
+            description = "В Варшаве 28 марта выступит местная рок-группа с необычным и новым стилем музыки"
+        ),
+        FeedItem(
+            image = "https://polsha4you.com/wp-content/uploads/2019/10/1q.png",
+            title = "Концерт в Польше",
+            description = "В Варшаве 28 марта выступит местная рок-группа с необычным и новым стилем музыки"
+        ),
+        FeedItem(
+            image = "https://polsha4you.com/wp-content/uploads/2019/10/1q.png",
+            title = "Концерт в Польше",
+            description = "В Варшаве 28 марта выступит местная рок-группа с необычным и новым стилем музыки"
+        )
     )
 }

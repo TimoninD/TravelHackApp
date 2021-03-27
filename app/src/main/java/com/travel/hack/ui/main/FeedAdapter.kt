@@ -21,6 +21,7 @@ fun feedAdapterDelegate() = adapterDelegate<FeedItem, FeedItem>(R.layout.item_fe
         with(itemView) {
             Glide.with(context)
                 .load(item.image)
+                .placeholder(R.drawable.bg_feed_placeholder)
                 .apply {
                     val radius = context.convertDpToPx(RADIUS)
                     transform(CenterCrop(), GranularRoundedCorners(radius, radius, 0f, 0f))

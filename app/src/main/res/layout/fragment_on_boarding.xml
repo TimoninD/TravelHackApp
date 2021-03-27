@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/tinder_title"
+        app:title="@string/on_boarding_title"
         />
 
     <com.yuyakaido.android.cardstackview.CardStackView

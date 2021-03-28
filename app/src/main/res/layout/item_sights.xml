@@ -52,7 +52,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/primary_variant" />
-
+    
+   <!-- <TextView
+        android:layout_width=""
+        android:layout_height=""
+-->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

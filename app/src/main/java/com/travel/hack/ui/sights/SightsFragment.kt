@@ -34,6 +34,7 @@ class SightsFragment : BaseFragment() {
                 } else {
                     viewModel.selectedSightsId.remove(place.id)
                 }
+                tvTitle.text = getString(R.string.sights_count, viewModel.selectedSightsId.size)
                 btnNext.isVisible = viewModel.selectedSightsId.isNotEmpty()
                 adapter.notifyItemChanged(position)
             }
@@ -63,6 +64,8 @@ class SightsFragment : BaseFragment() {
         }
 
         viewModel.sights.observe(viewLifecycleOwner, {
+            tvTitle.text = getString(R.string.sights_count, it.size)
+
             adapter.items = it
             adapter.notifyDataSetChanged()
         })

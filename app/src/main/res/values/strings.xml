@@ -8,7 +8,7 @@
     <string name="cities_select">Выбрать</string>
     <string name="sights_next">Далее</string>
     <string name="main_button">Создать маршрут</string>
-    <string name="sights_count">Всего мест: %d</string>
+    <string name="sights_count">Время маршрута: %d ч</string>
 
     <string name="google_maps_key" translatable="false">AIzaSyDnyEM3Y02WclxA9Rr3fwcQWZFp9ucxR_U</string>
 </resources>

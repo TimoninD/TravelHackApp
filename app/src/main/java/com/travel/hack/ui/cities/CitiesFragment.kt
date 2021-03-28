@@ -42,6 +42,8 @@ class CitiesFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        btnNext.isVisible = viewModel.selectedCityId != null
+
         rvCities.addItemDecoration(
             GridSpacingItemDecoration(
                 SPAN_COUNT,

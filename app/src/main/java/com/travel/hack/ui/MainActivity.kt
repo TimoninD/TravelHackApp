@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         val navGraph = graphInflater.inflate(R.navigation.main)
         val navController = navHostFragment.navController
         when {
-            prefs.name != null && prefs.name.orEmpty().isNotBlank() && false -> navGraph.startDestination =
+            prefs.name != null && prefs.name.orEmpty().isNotBlank() -> navGraph.startDestination =
                 R.id.citiesFragment
             else -> navGraph.startDestination = R.id.usernameFragment
         }

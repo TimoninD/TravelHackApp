@@ -17,6 +17,10 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+    <style name="TextSemiBold.24.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <style name="TextSemiBold.24.White">
         <item name="android:textColor">@color/white</item>
     </style>

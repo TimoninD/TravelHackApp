@@ -2,9 +2,11 @@ package com.travel.hack.ui
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.google.android.gms.location.LocationServices
@@ -18,24 +20,6 @@ import org.koin.android.ext.android.inject
 class MainActivity : AppCompatActivity() {
 
     private val prefs: Prefs by inject()
-
-    private val fusedLocationClient by lazy {
-        LocationServices.getFusedLocationProviderClient(baseContext)
-    }
-
-    @SuppressLint("MissingPermission")
-    private val requestPermissionLauncher =
-        registerForActivityResult(
-            ActivityResultContracts.RequestPermission()
-        ) { isGranted ->
-
-            if (isGranted) {
-                fusedLocationClient.lastLocation.addOnSuccessListener {
-                    prefs.lat = it.latitude.toFloat()
-                    prefs.lng = it.longitude.toFloat()
-                }
-            }
-        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +36,12 @@ class MainActivity : AppCompatActivity() {
             else -> navGraph.startDestination = R.id.usernameFragment
         }
         navController.graph = navGraph
-        requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
+    }
+
+
+
+    companion object {
+        const val REQUEST_CODE = 123
     }
 
 
